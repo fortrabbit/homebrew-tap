@@ -5,13 +5,13 @@
 class Frbit < Formula
   desc "Command-line interface for the fortrabbit public API"
   homepage "https://github.com/fortrabbit/frbit-cli"
-  version "1.21.0"
+  version "1.22.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.21.0/frbit_macOS_Intel.tar.gz"
-      sha256 "5ed40a5a9c39a349c6655cdde3b4fda8201be9bfe2cd137a40ef8351009dac31"
+      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.22.0/frbit_macOS_Intel.tar.gz"
+      sha256 "1a7ae86ce9593d292b2c462dc09e83042c8e2435012b531be1c20520fc1a2f5c"
 
       define_method(:install) do
         bin.install "frbit"
@@ -19,8 +19,8 @@ class Frbit < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.21.0/frbit_macOS_AppleSilicon.tar.gz"
-      sha256 "5649aae5b6c22555d0794f44c0375ec60ae4967a2880f4c8425a8f89bbfd615e"
+      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.22.0/frbit_macOS_AppleSilicon.tar.gz"
+      sha256 "015dfc4c7d03a908184e2285199318d61248e06be899fbc2361ddc708e30562b"
 
       define_method(:install) do
         bin.install "frbit"
@@ -31,16 +31,16 @@ class Frbit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.21.0/frbit_linux_amd64.tar.gz"
-      sha256 "97d15871a6a29d6a0f2ec0a014a45b3d7505c6c0380e9bbf1c024750fc68ce0b"
+      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.22.0/frbit_linux_amd64.tar.gz"
+      sha256 "1405c319e073472e64c200566128a934a6891b3fc5eca79c4605840417abc8f7"
       define_method(:install) do
         bin.install "frbit"
         generate_completions_from_executable(bin/"frbit", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.21.0/frbit_linux_arm64.tar.gz"
-      sha256 "685b0ede0c039bafb5aa43c436de67b9920e4d55dd2a58eba2b4733aa44db850"
+      url "https://github.com/fortrabbit/frbit-cli/releases/download/v1.22.0/frbit_linux_arm64.tar.gz"
+      sha256 "09e7d359c0e001793232dba2331bb540266aba2c57404c7b3b7f399229a2a903"
       define_method(:install) do
         bin.install "frbit"
         generate_completions_from_executable(bin/"frbit", "completion")
